@@ -5,6 +5,8 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  # adapter: redis
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  adapter: postgresql
+  url: postgres://hhokctovufllrs:2b8218bb8994df4ea289ed079cd1e15ca2922bc79cce4b29bef471f83b68ea3c@ec2-54-235-212-58.compute-1.amazonaws.com:5432/d8qae1faah05g5
   channel_prefix: chataro_production
