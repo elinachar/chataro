@@ -24,14 +24,19 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-    @message = Message.new(message_params)
+    @room = Room.find(params[:room_id])
+    @message = @room.messages.new(message_params)
+    @message.user = current_user
+    @message.save
+    @user = current_user
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render :show, status: :created, location: @message }
+        format.html { redirect_to @room, notice: 'Review was successfully created.' }
+        format.json { render :show, status: :created, location: @room }
+        format.js
       else
-        format.html { render :new }
+        format.html { redirect_to @room, alert: 'Review was not saved successfully. Please enter a review and rate the product.' }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +74,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:description, :user_id, :room_id)
+      params.require(:message).permit(:body, :user_id, :room_id)
     end
 end
