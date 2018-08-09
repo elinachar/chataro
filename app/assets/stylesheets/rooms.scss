@@ -1,3 +1,48 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Index
+.rooms {
+  background-color: var(--off-white);
+  margin-top: 20px;
+}
+
+.btn-new-rooms {
+  margin-right: 20px;
+}
+
+.room-card {
+  background-color: var(--green);
+  height: 180px;
+  padding-top: 70px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.room-card:hover {
+  cursor: pointer;
+}
+
+.room-links-index {
+  padding-top: 40px;
+}
+
+// Show
+.msg-show {
+  background-color: var(--off-white);
+  height: 400px;
+}
+
+.msg-submition {
+  background-color: var(--off-white);
+}
+
+#room_message {
+  margin-left: 10px;
+}
+
+.show-link-btns {
+  margin-top: 20px;
+}
