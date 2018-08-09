@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<div class="container">
-  <h1><%= @room.name %></h1>
-</div>
-
-<div>
-  <%= render @messages %>
-</div>
-
-<div class="show-link-btns">
-  <%= link_to 'Edit group', edit_room_path(@room), class: "btn btn-white" %>
-  <%= link_to '<span class="glyphicon glyphicon-arrow-left"></span> Go back to all groups'.html_safe, rooms_path, class: "btn btn-white" %>
-=======
-<div class="container data-room-id="<%= @room.id %>"">
-  <h1> <%= @room.name %></h1>
-
+<div class="container data-room-id="<%= @room.id %>>
+    <h1> <%= @room.name %> </h1>
   <div class="chatroom">
     <%= render "messages" %>
     <div class="row msg-submition">
@@ -35,5 +21,7 @@
     <%= link_to 'Edit group', edit_room_path(@room), class: "btn btn-white" %>
     <%= link_to '<span class="glyphicon glyphicon-arrow-left"></span> Go back to all groups'.html_safe, rooms_path, class: "btn btn-white" %>
   </div>
->>>>>>> user-image
+
+
+
 </div>

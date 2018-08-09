@@ -33,6 +33,16 @@
 .msg-show {
   background-color: var(--off-white);
   height: 400px;
+  padding: 15px;
+}
+
+.msg-body {
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.msg-body p {
+  margin-bottom: 2px;
 }
 
 .msg-submition {

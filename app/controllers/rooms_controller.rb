@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-    @messages = @room.messages.order("created_at DESC")
+    @messages = @room.messages.order("created_at ASC")
   end
 
   # GET /rooms/new
