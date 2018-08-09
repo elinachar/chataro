@@ -47,6 +47,17 @@
 
 .msg-submition {
   background-color: var(--off-white);
+  margin: 0;
+}
+
+.msg-input {
+  resize: none; //Remove resizing option at bottom right
+  overflow: auto; //Remove vertical bar in Internet explorer
+  width: 100%;
+}
+
+.msg-submition .actions {
+  padding-left: 0;
 }
 
 #room_message {

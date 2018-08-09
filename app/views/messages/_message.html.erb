@@ -2,6 +2,6 @@
     <%= image_tag message.user.photo_url.to_s, alt: "user's photo", class: "img-responsive photo-msg col-xs-1" %>
     <div class="col-xs-11 msg-body">
       <p>  <strong><%= message.user.first_name %></strong> <small><%= "&#8729; #{message.created_at.strftime("%H:%M")}".html_safe %></small></p>
-      <p> <%= message.description %> </p>
+      <p> <%= message.body %> </p>
     </div>
 </div><!-- end row -->
