@@ -33,5 +33,9 @@
 # Ignore uploaded test images
 /public/uploads
 
+<<<<<<< HEAD
 # Ignore app/images
+=======
+# Ignore app_images
+>>>>>>> user-image
 /app_images
