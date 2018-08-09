@@ -1,9 +1,12 @@
+<div class="container">
+  <h1><%= @room.name %></h1>
+</div>
 
+<div>
+  <%= render @messages %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @room.name %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room), class: "btn btn-white" %>
-<%= link_to 'Back', rooms_path, class: "btn btn-white" %>
+<div class="show-link-btns">
+  <%= link_to 'Edit group', edit_room_path(@room), class: "btn btn-white" %>
+  <%= link_to '<span class="glyphicon glyphicon-arrow-left"></span> Go back to all groups'.html_safe, rooms_path, class: "btn btn-white" %>
+</div>
