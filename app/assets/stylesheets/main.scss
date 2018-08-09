@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+
+/** Define colors of the page **/
+:root {
+  --green: #bcc8a5;
+  --off-white: #f8f9f6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--green) !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* apply text-decoration:none to all links of the app (it does not work when applied on other styles) */
+a:-webkit-any-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn {
+  background-color: var(--green);
+}
+
+.btn:hover {
+  background-color: #c9d3b7;
+}
+
+.btn-white {
+  background-color: var(--off-white);
+}
+
+.btn-white:hover {
+  background-color: #eaeee4;
+}
+
+.anchor {
+  padding-top: 60px;
+}

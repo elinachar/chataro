@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-2">
+    <%= image_tag message.user.photo_url.to_s, alt: "user's photo", class: "img-responsive photo-msg" %>
+  </div>
+  <div class="col-xs-offset-2 col-xs-10">
+    <%= message.user.first_name %> <small><%= "&#8729; #{message.created_at.strftime("%H:%M")}".html_safe %></small>
+  </div>
+  <div class="col-xs-offset-2 col-xs-10">
+      <p><%= message.description %></p>
+  </div>
+</div><!-- end row -->

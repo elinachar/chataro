@@ -1,0 +1,13 @@
+<% if room.name %>
+  <div class="col-xs-12 col-sm-6 col-md-4", data-room-id="<%= room.id %>">
+    <%= link_to room, :action => 'go' do %>
+      <div class="room-card">
+        <h4><%= room.name %></h4>
+        <div class ="room-links-index">
+          <%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_room_path(room) %>
+          <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, room, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div> <!-- end room-links-index -->
+      </div> <!-- end room-card -->
+    <% end %>
+  </div>
+<% end %>
