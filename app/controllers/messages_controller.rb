@@ -32,11 +32,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @room, notice: 'Review was successfully created.' }
+        format.html { redirect_to @room, notice: 'Message was sent.' }
         format.json { render :show, status: :created, location: @room }
         format.js
       else
-        format.html { redirect_to @room, alert: 'Review was not saved successfully. Please enter a review and rate the product.' }
+        format.html { redirect_to @room, alert: 'Message could not send.' }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
