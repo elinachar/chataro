@@ -21,10 +21,9 @@ $(document).on("turbolinks:load", function() {
 
     var arraytxt = this.value.split('\n');
     var rows = arraytxt.length;
-    
+
     for ( i = 0 ; i < arraytxt.length ; i++ ) {
       rows += parseInt(arraytxt[i].length/cols);
-      console.log("math", arraytxt[i].length/cols)
    };
 
     if ( rows > maxrows ) {

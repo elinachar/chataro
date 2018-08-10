@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   root 'rooms#index'
 
-  # Run ActionCable in same server as the app
+  # The AcitonCable runs at the same server with the app
   mount ActionCable.server => '/cable'
 end
