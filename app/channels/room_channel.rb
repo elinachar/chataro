@@ -1,6 +1,6 @@
 class RoomChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "room_channel"
+    stream_from "room_channel"
   end
 
   def unsubscribed
@@ -8,7 +8,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def listen(data)
-    stop_all_streams
-    stream_for data["room_id"]
+    # stop_all_streams
+    # stream_for data["room_id"]
   end
 end

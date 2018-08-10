@@ -1,0 +1,21 @@
+.login,
+.signup,
+.forgot-password {
+  background-color: var(--off-white);
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.login h2 {
+  margin-bottom: 40px;
+}
+
+.link-signup,
+.ling-login {
+  margin-top: 40px;
+}
+
+.link-signup a,
+.link-login a {
+  color: blue !important;
+}
